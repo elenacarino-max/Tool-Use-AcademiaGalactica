@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Academia Galactica: laboratorio interactivo de Tool Use, contratos JSON, orquestacion y seguridad. Proyecto educativo no oficial.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070c14'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='42' fill='%23f4ce73'%3EG%3C/text%3E%3C/svg%3E"><title>Academia Gal&aacute;ctica 3.0 &middot; Protocolo Droide</title>
+<style>/*CSS*/</style>
+</head>
+<body>
+<a href="#view" class="skip">Saltar al contenido</a>
+<header class="topbar">
+<a class="brand" href="#inicio" onclick="go(0);return false"><span class="brand-mark" aria-hidden="true">&#10022;</span><span><span class="brand-name">ACADEMIA GAL&Aacute;CTICA</span><span class="brand-sub" style="display:block">PROTOCOLO DROIDE / EDICI&Oacute;N INGENIERA</span></span></a>
+<div class="top-actions"><span class="status">Motor local &middot; LLM simulado</span><button class="btn secondary compact" onclick="showGlossary()">Diccionario</button><button class="btn ghost compact" onclick="go(8)">Mi informe</button></div>
+</header>
+<div class="shell"><aside class="rail" aria-label="Navegaci&oacute;n de la academia"><div class="rail-heading">Ruta de aprendizaje / 3.0</div><nav class="nav" id="nav" aria-label="Estaciones"></nav><div class="rail-bottom"><div class="overline">Evidencias de aprendizaje</div><div class="progress-track" role="progressbar" aria-label="Retos superados" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div><div class="progress-copy" id="progress-copy"></div><div class="rail-buttons"><button class="btn secondary compact" onclick="exportProgress()">Exportar bit&aacute;cora JSON</button><label class="btn ghost compact import-label">Importar progreso<input type="file" accept="application/json,.json" id="import-file" class="hidden" onchange="importProgress(this.files[0]);this.value=''" aria-label="Importar progreso JSON"></label></div><p class="small subtle" id="storage-note" style="margin-top:17px">Guardado en este navegador. Sin cuentas ni claves.</p></div></aside><main class="view" id="view" tabindex="-1"></main></div>
+<footer class="site-footer"><span>Experiencia educativa no oficial inspirada en Star Wars. Sin afiliaci&oacute;n con Lucasfilm.</span><span>Datos ficticios &middot; Sin rastreo &middot; Ninguna acci&oacute;n sobre sistemas reales</span></footer>
+<dialog id="modal" aria-labelledby="modal-title"></dialog><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:30px">Esta academia necesita JavaScript. Abre el archivo en un navegador y permite los scripts locales.</p></noscript>
+<script>/*ENGINE*/</script>
+<script>/*APP*/</script>
+</body></html>

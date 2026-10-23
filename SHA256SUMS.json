@@ -1,0 +1,23 @@
+{
+  ".gitignore": "4ff0452c9d181a145ab7f48eda7a8afa8db185e6e720f81ddda8f884692d8ceb",
+  "LEEME.md": "95cf62118afd2fbb57b8c5f47d7ef331f9cff1d99915682374aa8e3045ddeed5",
+  "VERIFICACION.md": "7c22310dc6bd7ab0fed8de5eb46f3cff3e2f100b718c6022f20bd6c7f0be8405",
+  "backend.py": "6c428c5f05cce15209ea5cfae0fae0ecdada68798b19e612773901e63e02f51e",
+  "build_frontend.py": "a010b45b0efa040438da5c2f5a3db0694be8537e957deec3478cd3afdda8b068",
+  "catalog.json": "bff28f9c99c71bd1263ef6852f8ef29f8d400ae83306de734fa9bfc3702f411e",
+  "frontend/app.js": "2e6541bc84e575ddb0e8e0adf0c201f3772b654d939eed9a9a1da6dd7c36da20",
+  "frontend/engine.js": "c6e7a450115e0c85539e083dd4bcd2e4926fe45e1943ed5b8277bcdbfe3fa546",
+  "frontend/engine.test.cjs": "616aecd935dbeb5351e58a9810678d5e63f0112e5b38784cbe0f954cdf47614c",
+  "frontend/handlers.js": "25eaf267f0dcfb65c034200f105fdf192c506853db98d966002190f5fb3c458d",
+  "frontend/index.template.html": "d31c608ce825e4211699ef017b15594a685f2904f83bdc22ac94da278fb426bf",
+  "frontend/style.css": "6dbd95a36d0befb8e639c08d844683c098991eb93dce8b32e5c535e8e3f27c1a",
+  "index.html": "69e735249032c201c0995f4f485540c8d0149b4a2a68db1ab0b35f8946f7db7c",
+  "iniciar_windows.bat": "e1c0a5d53e07f249ffdb01537a8305a2c47ebbd2f28660f5baaeef9d893248d1",
+  "ollama_readonly.py": "da08871c4ace4cc6812cf3cfbbd6a3f819f540191885e84cb88512e02b1eaa1b",
+  "requirements.txt": "bf9a437defd04e1102157db8fdfc48a4f49ea22a9992ec48cbbdf0cfe8011799",
+  "tests/test_api.py": "ec7ea2f898b8657230ab3fceab11ed7a7d96fe4e9d34b0afbaa799e281879b34",
+  "tests/test_ollama_adapter.py": "d528e61603c279135e8c5fe7b289b1c57669a4a688520d12b2f52937b0033a7c",
+  "tests/test_runtime.py": "0e75a2dc420cfaca18c501c4f0f11cd9dab7131c1dd68c5e1764224668c191bb",
+  "tool_engine.py": "3a7bafe082fa7cd292dbafa9bf6b8849f3f30a28f4ed1b53d99d5fdec6637efc",
+  "verification_results.json": "ac74477d6cd05ca30a15952337971968ef34c71e8e7999ceeac3866acfe32c8f"
+}

@@ -1,0 +1,172 @@
+{
+  "localizar_baliza": {
+    "name": "localizar_baliza",
+    "description": "Lee la baliza de un sector. Devuelve su estado, personas y una nota externa no confiable. No autoriza acciones.",
+    "kind": "lectura",
+    "scope": "telemetria:read",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "sector": {
+          "type": "string",
+          "enum": [
+            "HOTH",
+            "DAGOBAH",
+            "TATOOINE"
+          ]
+        }
+      },
+      "required": [
+        "sector"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "sector": "DAGOBAH"
+    }
+  },
+  "consultar_rutas": {
+    "name": "consultar_rutas",
+    "description": "Compara rutas desde Hoth hasta Dagobah usando telemetria ficticia. No despacha ninguna nave.",
+    "kind": "lectura",
+    "scope": "rutas:read",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "origen": {
+          "type": "string",
+          "enum": [
+            "HOTH"
+          ]
+        },
+        "destino": {
+          "type": "string",
+          "enum": [
+            "DAGOBAH"
+          ]
+        }
+      },
+      "required": [
+        "origen",
+        "destino"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "origen": "HOTH",
+      "destino": "DAGOBAH"
+    }
+  },
+  "consultar_nave": {
+    "name": "consultar_nave",
+    "description": "Lee capacidad y combustible de una nave de la flota de entrenamiento.",
+    "kind": "lectura",
+    "scope": "flota:read",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "nave_id": {
+          "type": "string",
+          "enum": [
+            "ALBA-7",
+            "LUZ-2"
+          ]
+        }
+      },
+      "required": [
+        "nave_id"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "nave_id": "ALBA-7"
+    }
+  },
+  "calcular_reserva": {
+    "name": "calcular_reserva",
+    "description": "Resta consumo previsto al combustible disponible. Es una funcion local, no una API de red.",
+    "kind": "calculo",
+    "scope": "calculo:read",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "combustible": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "consumo": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "combustible",
+        "consumo"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "combustible": 60,
+      "consumo": 32
+    }
+  },
+  "despachar_rescate": {
+    "name": "despachar_rescate",
+    "description": "Crea una orden ficticia en memoria. Requiere permiso de operadora y confirmacion humana vinculada a los argumentos. Comprueba ruta, capacidad y reserva.",
+    "kind": "escritura",
+    "scope": "rescate:write",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "nave_id": {
+          "type": "string",
+          "enum": [
+            "ALBA-7",
+            "LUZ-2"
+          ]
+        },
+        "destino": {
+          "type": "string",
+          "enum": [
+            "DAGOBAH"
+          ]
+        },
+        "ruta_id": {
+          "type": "string",
+          "enum": [
+            "NORTE",
+            "SUR",
+            "ESTE"
+          ]
+        },
+        "personas": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 64
+        }
+      },
+      "required": [
+        "nave_id",
+        "destino",
+        "ruta_id",
+        "personas",
+        "idempotency_key"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "nave_id": "ALBA-7",
+      "destino": "DAGOBAH",
+      "ruta_id": "SUR",
+      "personas": 3,
+      "idempotency_key": "rescate-001"
+    }
+  }
+}
